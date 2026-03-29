@@ -1,6 +1,6 @@
 # Halo -- Voice-Driven AI Companion for Claude Code
 
-A real-time voice AI companion that uses Gemini 2.0 Flash Live for bidirectional audio conversation. Halo can see your screen, dispatch tasks to Claude Code, search your Obsidian vault via RAG, and remember things across sessions. It runs as a system tray app on Windows with a global hotkey.
+A real-time voice AI companion that uses Gemini 3.1 Flash Live for bidirectional audio conversation. Halo can see your screen, dispatch tasks to Claude Code, search your Obsidian vault via RAG, and remember things across sessions. It runs as a system tray app on Windows with a global hotkey.
 
 ## Features
 
@@ -20,7 +20,7 @@ A real-time voice AI companion that uses Gemini 2.0 Flash Live for bidirectional
 ```
 YOU (voice) -----> Ctrl+Space hotkey
                         |
-              GEMINI 2.0 FLASH LIVE
+              GEMINI 3.1 FLASH LIVE
          (WebSocket bidiGenerateContent)
 
 Inputs:  your voice (VAD) + screen captures + vault RAG + Claude Code context
@@ -116,7 +116,7 @@ Halo responds to natural speech:
 | vault_path | string | ~/obsidian-vault | Path to your Obsidian vault |
 | gemini_api_key_env | string | GEMINI_API_KEY | Env var name for Gemini API key |
 | voice | string | Kore | Gemini voice (see Voice Options below) |
-| gemini_model | string | gemini-2.0-flash-live-001 | Gemini model for Live API |
+| gemini_model | string | gemini-3.1-flash-live-preview | Gemini model for Live API |
 | screen_capture_interval | int | 2 | Seconds between screenshots |
 | screen_width | int | 768 | Screenshot width in pixels |
 | screen_quality | int | 50 | JPEG quality (1-100) |

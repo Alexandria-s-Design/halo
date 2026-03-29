@@ -40,7 +40,7 @@ class Config:
 
         # Voice
         self.voice = self._data.get("voice", "Kore")
-        self.gemini_model = self._data.get("gemini_model", "gemini-2.0-flash-live-001")
+        self.gemini_model = self._data.get("gemini_model", "gemini-3.1-flash-live-preview")
 
         # Screen
         self.screen_capture_interval = self._data.get("screen_capture_interval", 2)
