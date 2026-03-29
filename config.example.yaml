@@ -1,0 +1,125 @@
+# Halo Configuration -- Example
+# Copy this file to config.yaml and edit to match your setup.
+
+# ============================================================
+# REQUIRED
+# ============================================================
+
+# Path to your Obsidian vault (supports ~ for home directory)
+vault_path: ~/obsidian-vault
+
+# Environment variable name that holds your Gemini API key.
+# The actual key should be in .env, not here.
+gemini_api_key_env: GEMINI_API_KEY
+
+# ============================================================
+# VOICE
+# ============================================================
+
+# Gemini voice name. Options: Kore, Aoede, Puck, Charon, Fenrir
+voice: Kore
+
+# Gemini model for the Live API session
+gemini_model: gemini-2.0-flash-live-001
+
+# ============================================================
+# SCREEN CAPTURE
+# ============================================================
+
+# Seconds between screenshot captures and sends to Gemini.
+# Lower = more responsive but uses more context tokens.
+screen_capture_interval: 2
+
+# Screenshot width in pixels (height scales proportionally).
+# Smaller = fewer tokens, larger = more detail.
+screen_width: 768
+
+# JPEG quality for screenshots (1-100). Lower = fewer tokens.
+screen_quality: 50
+
+# ============================================================
+# SESSION
+# ============================================================
+
+# Minutes before automatic session reset (Gemini context window limit).
+# Halo will save memory and reconnect when this time elapses.
+session_reset_minutes: 120
+
+# Maximum number of reconnect attempts before giving up.
+max_reconnect_attempts: 3
+
+# Global hotkey to toggle listening on/off.
+# Format: modifier+key (e.g., ctrl+space, alt+h)
+hotkey: ctrl+space
+
+# ============================================================
+# CLAUDE CODE DISPATCH
+# ============================================================
+
+# Enable/disable the dispatch_to_claude tool.
+# When enabled, Halo can spawn Claude Code for complex background tasks.
+claude_dispatch_enabled: true
+
+# Maximum seconds for a dispatched Claude Code task before timeout.
+claude_dispatch_timeout: 300
+
+# Path to MCP server configuration JSON for Claude Code dispatch.
+# Leave empty to run Claude without MCP tools.
+# Example: ~/halo/mcp-config.json
+claude_mcp_config: ""
+
+# ============================================================
+# CONTEXT (KNOWLEDGE BASE)
+# ============================================================
+
+# List of files to load into the system prompt at session start.
+# Paths can be absolute or relative to the vault.
+# These files give Halo knowledge about you, your projects, etc.
+context_files: []
+# Example:
+#   - MEMORY.md
+#   - projects/priorities.md
+#   - ~/.claude/projects/my-project/memory/MEMORY.md
+
+# ============================================================
+# NOTIFICATIONS (OPTIONAL)
+# ============================================================
+
+# Environment variable name holding your Telegram bot token.
+# Leave empty to disable Telegram notifications.
+telegram_bot_token_env: ""
+# Example: TELEGRAM_BOT_TOKEN
+
+# Environment variable name holding your Telegram chat ID.
+telegram_chat_id_env: ""
+# Example: TELEGRAM_CHAT_ID
+
+# Email address for task result notifications.
+# Requires Google MCP or similar email tool in Claude dispatch.
+notification_email: ""
+
+# ============================================================
+# VPS / SSH (OPTIONAL)
+# ============================================================
+
+# Remote server hostname for SSH commands.
+# Leave empty to disable SSH features.
+vps_host: ""
+
+# SSH username for the remote server.
+vps_user: ""
+
+# ============================================================
+# TERMINAL MONITORING
+# ============================================================
+
+# Maximum lines to keep in each terminal buffer.
+max_terminal_lines: 200
+
+# ============================================================
+# DEBUG
+# ============================================================
+
+# Enable debug mode (verbose logging, preview window).
+# Can also be enabled with --debug flag or HALO_DEBUG=true env var.
+debug: false

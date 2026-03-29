@@ -1,0 +1,49 @@
+# Halo Configuration
+# See config.example.yaml for detailed documentation of all options.
+
+# Required -- path to your Obsidian vault
+vault_path: ~/obsidian-vault
+
+# Gemini API key environment variable name (reads from .env)
+gemini_api_key_env: GEMINI_API_KEY
+
+# Voice settings
+voice: Kore
+gemini_model: gemini-2.0-flash-live-001
+
+# Screen capture
+screen_capture_interval: 2
+screen_width: 768
+screen_quality: 50
+
+# Session
+session_reset_minutes: 120
+max_reconnect_attempts: 3
+hotkey: ctrl+space
+
+# Claude Code dispatch
+claude_dispatch_enabled: true
+claude_dispatch_timeout: 300
+claude_mcp_config: ""
+
+# Context files loaded into system prompt at session start
+# List file paths (absolute or relative to vault) to load as knowledge base
+context_files: []
+# Example:
+#   - MEMORY.md
+#   - projects/priorities.md
+
+# Terminal monitoring
+max_terminal_lines: 200
+
+# Notifications (optional -- leave empty to disable)
+telegram_bot_token_env: ""
+telegram_chat_id_env: ""
+notification_email: ""
+
+# VPS/SSH (optional -- leave empty to disable)
+vps_host: ""
+vps_user: ""
+
+# Debug mode
+debug: false
